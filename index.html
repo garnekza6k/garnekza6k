@@ -2,94 +2,90 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Umów prezentację Thermomix</title>
-  <link href="https://fonts.googleapis.com/css2?family=Century+Gothic&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Umów prezentację Thermomixa</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Century Gothic', sans-serif;
-      background-color: #000;
-      color: #fff;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-      padding: 2rem;
     }
+
+    img {
+      max-width: 300px;
+      margin-top: 30px;
+    }
+
     h1 {
       color: #CC508C;
       text-align: center;
+      margin: 20px;
     }
-    img {
-      max-width: 300px;
-      margin-bottom: 1rem;
-    }
+
     form {
-      background: #111;
-      padding: 2rem;
-      border-radius: 1rem;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
       width: 100%;
-      max-width: 500px;
-      box-shadow: 0 0 20px rgba(204, 80, 140, 0.4);
+      max-width: 400px;
+      margin-bottom: 40px;
     }
-    label {
-      display: block;
-      margin-top: 1rem;
-      color: #4BA64B;
-    }
-    input, select, textarea {
+
+    input, select, textarea, button {
       width: 100%;
-      padding: 0.5rem;
-      margin-top: 0.3rem;
-      border-radius: 0.5rem;
-      border: none;
-      font-size: 1rem;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-family: inherit;
     }
+
     button {
-      background-color: #CC508C;
-      color: white;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      margin-top: 1.5rem;
-      border-radius: 0.5rem;
-      cursor: pointer;
-    }
-    button:hover {
       background-color: #4BA64B;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #3e8f3e;
     }
   </style>
 </head>
 <body>
-  <img src="assets/thermomix.png" alt="Thermomix" />
-  <h1>umów prezentację thermomix</h1>
+  <img src="./assets/thermomix.png" alt="Thermomix" />
+  <h1>Umów prezentację Thermomixa</h1>
   <form action="https://formspree.io/f/mldjoldp" method="POST">
-    <label for="name">Imię i nazwisko:</label>
-    <input type="text" name="name" required>
-
-    <label for="email">Adres e-mail:</label>
-    <input type="email" name="email" required>
-
-    <label for="phone">Numer telefonu:</label>
-    <input type="tel" name="phone" required>
-
-    <label for="date">Wybierz datę prezentacji:</label>
-    <input type="date" name="date" required>
-
-    <label for="time">Wybierz godzinę:</label>
-    <select name="time" required>
-      <option value="09:00">09:00</option>
-      <option value="11:00">11:00</option>
-      <option value="13:00">13:00</option>
-      <option value="15:00">15:00</option>
-      <option value="17:00">17:00</option>
-    </select>
-
-    <label for="message">Dodatkowe uwagi:</label>
-    <textarea name="message" rows="3"></textarea>
-
+    <label>
+      Imię i nazwisko:
+      <input type="text" name="name" required />
+    </label>
+    <label>
+      E-mail:
+      <input type="email" name="email" required />
+    </label>
+    <label>
+      Telefon:
+      <input type="tel" name="phone" required />
+    </label>
+    <label>
+      Preferowana data prezentacji:
+      <input type="date" name="date" required />
+    </label>
+    <label>
+      Preferowana godzina:
+      <input type="time" name="time" required />
+    </label>
+    <label>
+      Wiadomość:
+      <textarea name="message" rows="4" placeholder="Dodatkowe informacje..."></textarea>
+    </label>
     <button type="submit">Umów prezentację</button>
   </form>
 </body>
