@@ -3,110 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>umów prezentację | garnekza6k</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f8f8;
-      padding: 40px;
-      text-align: center;
-    }
-    h1 {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      font-size: 28px;
-      color: #4BA64B;
-      margin-bottom: 30px;
-    }
-    h1 img {
-      height: 28px;
-      width: auto;
-      transform: translateY(-4px);
-    }
-    form {
-      max-width: 400px;
-      margin: 0 auto;
-      background-color: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-    }
-    label {
-      display: block;
-      margin-bottom: 10px;
-      font-weight: bold;
-      text-align: left;
-    }
-    input, textarea, select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-    button {
-      background-color: #CC508C;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    button:hover {
-      background-color: #b0487d;
-    }
-  </style>
+  <title>umów prezentację thermomixa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="assets/hours.js"></script>
 </head>
 <body>
+  <div class="container">
+    <h1>
+      umów prezentację
+      <img src="assets/g6k.png" alt="logo" class="mini-logo" />
+    </h1>
 
-  <h1>
-    umów prezentację
-    <img src="g6k.png" alt="logo garnekza6k" />
-  </h1>
+    <form action="https://formspree.io/f/mldjoldp" method="POST">
+      <div class="form-group">
+        <label for="name">imię i nazwisko:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
 
-  <form action="https://formspree.io/f/mldjoldp" method="POST">
-    <label for="name">Imię i nazwisko</label>
-    <input type="text" id="name" name="name" required />
+      <div class="form-group">
+        <label for="email">adres e-mail:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
 
-    <label for="email">Adres e-mail</label>
-    <input type="email" id="email" name="email" required />
+      <div class="form-group">
+        <label for="phone">numer telefonu:</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
 
-    <label for="phone">Telefon</label>
-    <input type="tel" id="phone" name="phone" required />
+      <div class="form-group">
+        <label for="date">wybierz datę prezentacji:</label>
+        <input type="date" id="date" name="data" required />
+      </div>
 
-    <label for="address">Adres do prezentacji</label>
-    <input type="text" id="address" name="address" required />
+      <div class="form-group">
+        <label for="time">wybierz godzinę prezentacji:</label>
+        <select id="time" name="godzina" required disabled>
+          <option value="">wybierz datę najpierw</option>
+        </select>
+      </div>
 
-    <label for="date">Data prezentacji</label>
-    <input type="date" id="date" name="date" required />
+      <div class="form-group">
+        <label for="adres">adres do prezentacji:</label>
+        <input type="text" id="adres" name="adres" required />
+      </div>
 
-    <label for="time">Godzina prezentacji</label>
-    <select id="time" name="time" required>
-      <option value="">Wybierz godzinę</option>
-      <option value="10:00">10:00</option>
-      <option value="12:00">12:00</option>
-      <option value="14:00">14:00</option>
-      <option value="16:00">16:00</option>
-      <option value="18:00">18:00</option>
-    </select>
-
-    <label for="message">Dodatkowe informacje</label>
-    <textarea id="message" name="message" rows="4"></textarea>
-
-    <button type="submit">wyślij</button>
-  </form>
-
-  <script>
-    // ustaw dzisiejszą datę jako minimalną
-    const today = new Date().toISOString().split("T")[0];
-    document.getElementById("date").setAttribute("min", today);
-
-    // opcjonalnie: ustawienie dostępnych godzin po wybraniu daty
-    // w przyszłości możemy to rozbudować o dynamiczne odblokowywanie
-  </script>
-
+      <button type="submit">umów prezentację</button>
+    </form>
+  </div>
 </body>
 </html>
