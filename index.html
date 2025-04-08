@@ -2,94 +2,97 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Umów prezentację Thermomixa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>umów prezentację | garnekza6k</title>
   <style>
     body {
-      font-family: 'Century Gothic', sans-serif;
-      background-color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    img {
-      max-width: 300px;
-      margin-top: 30px;
-    }
-
-    h1 {
-      color: #CC508C;
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      padding: 40px;
       text-align: center;
-      margin: 20px;
     }
-
+    h1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 28px;
+      color: #4BA64B;
+    }
+    h1 img {
+      height: 40px;
+      width: auto;
+    }
     form {
-      background: white;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      width: 100%;
       max-width: 400px;
-      margin-bottom: 40px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
     }
-
-    input, select, textarea, button {
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-align: left;
+    }
+    input, textarea, select {
       width: 100%;
       padding: 10px;
-      margin: 10px 0;
-      border-radius: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
       border: 1px solid #ccc;
-      font-family: inherit;
     }
-
     button {
-      background-color: #4BA64B;
+      background-color: #CC508C;
       color: white;
-      font-weight: bold;
-      cursor: pointer;
+      padding: 12px 20px;
       border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
     }
-
     button:hover {
-      background-color: #3e8f3e;
+      background-color: #b0487d;
     }
   </style>
 </head>
 <body>
-<img src="g6k.png" alt="g6k" />
- <h1 style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-  Umów prezentację
-  <img src="g6k.png" alt="logo garnekza6k" style="height: 40px; width: auto;" />
-</h1>
+
+  <h1>
+    umów prezentację
+    <img src="g6k.png" alt="logo garnekza6k" />
+  </h1>
+
   <form action="https://formspree.io/f/mldjoldp" method="POST">
-    <label>
-      Imię i nazwisko:
-      <input type="text" name="name" required />
-    </label>
-    <label>
-      E-mail:
-      <input type="email" name="email" required />
-    </label>
-    <label>
-      Telefon:
-      <input type="tel" name="phone" required />
-    </label>
-    <label>
-      Preferowana data prezentacji:
-      <input type="date" name="date" required />
-    </label>
-    <label>
-      Preferowana godzina:
-      <input type="time" name="time" required />
-    </label>
-    <label>
-      Wiadomość:
-      <textarea name="message" rows="4" placeholder="Dodatkowe informacje..."></textarea>
-    </label>
-    <button type="submit">Umów prezentację</button>
+    <label for="name">Imię i nazwisko</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Adres e-mail</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="phone">Telefon</label>
+    <input type="tel" id="phone" name="phone" required />
+
+    <label for="date">Data prezentacji</label>
+    <input type="date" id="date" name="date" required />
+
+    <label for="time">Godzina prezentacji</label>
+    <select id="time" name="time" required>
+      <option value="">Wybierz godzinę</option>
+      <option value="10:00">10:00</option>
+      <option value="12:00">12:00</option>
+      <option value="14:00">14:00</option>
+      <option value="16:00">16:00</option>
+      <option value="18:00">18:00</option>
+    </select>
+
+    <label for="message">Dodatkowe informacje</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <button type="submit">wyślij</button>
   </form>
+
 </body>
 </html>
